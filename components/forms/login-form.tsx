@@ -92,6 +92,7 @@ export function LoginForm() {
                     type="email"
                     placeholder="admin@jargaria.com"
                     className="flex-1 h-full bg-transparent outline-none text-[15px] text-[#2C1810] placeholder:text-[#B8A080] font-medium pr-4"
+                    suppressHydrationWarning
                   />
                 </div>
               </div>
@@ -110,6 +111,7 @@ export function LoginForm() {
                     type={showPassword ? "text" : "password"}
                     placeholder="••••••••"
                     className="flex-1 h-full bg-transparent outline-none text-[15px] text-[#2C1810] placeholder:text-[#B8A080] font-medium"
+                    suppressHydrationWarning
                   />
                   <button
                     type="button"
