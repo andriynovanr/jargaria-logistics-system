@@ -54,31 +54,31 @@ export function StatsCards() {
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className={`relative overflow-hidden rounded-2xl border border-[#E8DCC8] bg-white shadow-sm hover:shadow-md transition-shadow duration-200 ${
-            stat.highlight ? "bg-gradient-to-br from-[#FFF8E7] to-[#FFF1D0]" : ""
+          className={`relative overflow-hidden border-[3px] border-black bg-white shadow-[4px_4px_0_0_#000] ${
+            stat.highlight ? "bg-[#FFF8E1]" : ""
           }`}
         >
           <div className="flex items-stretch">
             {/* Konten utama */}
-            <div className="flex-1 p-5">
-              <p className="text-[10px] font-bold tracking-wider text-[#8B6914]/80 uppercase">
+            <div className="flex-1 p-4">
+              <p className="text-[10px] font-extrabold tracking-wider text-[#8B6914] uppercase">
                 {stat.label}
               </p>
-              <p className="mt-1.5 text-2xl font-bold text-[#2C1810]">
+              <p className="mt-1 text-2xl font-extrabold text-[#2C1810]">
                 {stat.value}
               </p>
-              <p className="mt-1.5 flex items-center gap-1 text-xs text-[#8B6914]/60">
+              <p className="mt-1 flex items-center gap-1 text-xs font-medium text-[#8B6914]/70">
                 {stat.subtitleIcon === "trending" && (
-                  <span className="text-green-600">↑</span>
+                  <span className="text-green-600 font-bold">↑</span>
                 )}
                 {stat.subtitleIcon === "warning" && (
-                  <span className="text-amber-500">!</span>
+                  <span className="text-amber-500 font-bold">!</span>
                 )}
                 {stat.subtitleIcon === "clock" && (
-                  <span className="text-[#8B6914]/40">⏱</span>
+                  <span className="text-[#8B6914]/50">⏱</span>
                 )}
                 {stat.subtitleIcon === "weight" && (
-                  <span className="text-[#8B6914]/40">⚖</span>
+                  <span className="text-[#8B6914]/50">⚖</span>
                 )}
                 {stat.subtitle}
               </p>
@@ -86,9 +86,9 @@ export function StatsCards() {
 
             {/* Ikon aksen */}
             <div
-              className={`flex items-center justify-center w-16 rounded-l-2xl ${stat.accentColor}`}
+              className={`flex items-center justify-center w-16 border-l-[3px] border-black ${stat.accentColor}`}
             >
-              <stat.icon className={`size-7 ${stat.iconColor}`} strokeWidth={1.8} />
+              <stat.icon className={`size-7 ${stat.iconColor}`} strokeWidth={2.5} />
             </div>
           </div>
         </div>

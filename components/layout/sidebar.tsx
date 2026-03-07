@@ -31,10 +31,10 @@ export function Sidebar() {
   const pathname = usePathname()
 
   return (
-    <aside className="flex flex-col w-64 min-h-screen bg-gradient-to-b from-[#3D2314] to-[#2C1810]">
+    <aside className="flex flex-col w-64 min-h-screen bg-[#3D2314] border-r-[3px] border-black">
       {/* Logo & Brand */}
       <div className="flex items-center gap-3 px-5 pt-6 pb-8">
-        <div className="rounded-2xl overflow-hidden shadow-lg shadow-black/30 ring-2 ring-[#D4A843]/30">
+        <div className="border-[3px] border-black shadow-[3px_3px_0_0_#000] overflow-hidden">
           <Image
             src="/logo-jargaria.png"
             alt={APP_NAME}
@@ -44,17 +44,17 @@ export function Sidebar() {
           />
         </div>
         <div className="leading-tight">
-          <p className="text-base font-bold text-[#F5E6C8] tracking-wider">
+          <p className="text-base font-extrabold text-[#F5E6C8] tracking-wider">
             JARGARIA
           </p>
-          <p className="text-xs font-semibold text-[#D4A843] tracking-wide">
+          <p className="text-xs font-bold text-[#D4A843] tracking-wide">
             EKSPEDISI
           </p>
         </div>
       </div>
 
       {/* Navigasi */}
-      <nav className="flex-1 px-3 space-y-1">
+      <nav className="flex-1 px-3 space-y-1.5">
         {navItems.map((item) => {
           const isActive =
             pathname === item.href || pathname.startsWith(item.href + "/")
@@ -64,13 +64,13 @@ export function Sidebar() {
               key={item.href}
               href={item.href}
               className={cn(
-                "flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-200",
+                "flex items-center gap-3 px-4 py-2.5 text-sm font-bold transition-all",
                 isActive
-                  ? "bg-[#D4A843] text-[#3D2314] shadow-md shadow-[#D4A843]/30"
-                  : "text-[#F5E6C8]/70 hover:bg-white/10 hover:text-[#F5E6C8]"
+                  ? "bg-[#D4A843] text-[#3D2314] border-[2px] border-black shadow-[3px_3px_0_0_#000]"
+                  : "text-[#F5E6C8]/80 hover:bg-[#5A3825] hover:text-[#F5E6C8] border-2 border-transparent"
               )}
             >
-              <item.icon className="size-5 shrink-0" strokeWidth={isActive ? 2.5 : 2} />
+              <item.icon className="size-5 shrink-0" strokeWidth={2.5} />
               {item.label}
             </Link>
           )
@@ -78,16 +78,16 @@ export function Sidebar() {
       </nav>
 
       {/* Profil User */}
-      <div className="px-4 py-4 border-t border-white/10">
+      <div className="px-4 py-4 border-t-[2px] border-[#5A3825]">
         <div className="flex items-center gap-3">
-          <div className="size-10 rounded-full bg-[#5A3825] flex items-center justify-center shrink-0 ring-2 ring-[#D4A843]/20">
-            <User className="size-5 text-[#D4A843]" />
+          <div className="size-10 border-[2px] border-black bg-[#5A3825] flex items-center justify-center shrink-0 shadow-[2px_2px_0_0_#000]">
+            <User className="size-5 text-[#D4A843]" strokeWidth={2.5} />
           </div>
           <div className="min-w-0">
-            <p className="text-sm font-medium text-[#F5E6C8] truncate">
+            <p className="text-sm font-bold text-[#F5E6C8] truncate">
               Admin Pusat
             </p>
-            <p className="text-xs text-[#F5E6C8]/50 truncate">
+            <p className="text-xs font-medium text-[#F5E6C8]/60 truncate">
               admin@jargaria.com
             </p>
           </div>

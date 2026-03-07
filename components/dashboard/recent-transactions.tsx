@@ -83,31 +83,31 @@ export function RecentTransactions() {
   return (
     <section>
       <div className="flex items-center justify-between">
-        <h2 className="text-lg font-bold text-[#2C1810]">
+        <h2 className="text-lg font-extrabold text-[#2C1810] uppercase tracking-wide">
           Recent Transactions
         </h2>
         <Link
           href="/laporan"
-          className="text-sm font-medium text-[#D4A843] hover:text-[#8B6914] transition-colors"
+          className="text-sm font-bold text-[#8B6914] border-b-[2px] border-black hover:text-[#D4A843] hover:border-[#D4A843] transition-colors"
         >
           View All
         </Link>
       </div>
 
-      <div className="mt-3 overflow-hidden rounded-2xl border border-[#E8DCC8] bg-white shadow-sm">
+      <div className="mt-3 overflow-hidden border-[3px] border-black bg-white shadow-[4px_4px_0_0_#000]">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-[#E8DCC8] bg-gradient-to-r from-[#FFF8E7] to-[#FFF4DC]">
-              <th className="px-5 py-3.5 text-left font-semibold text-[#2C1810]">
+            <tr className="border-b-[3px] border-black bg-[#FFF8E7]">
+              <th className="px-4 py-3 text-left font-extrabold text-[#2C1810]">
                 Date
               </th>
-              <th className="px-5 py-3.5 text-left font-semibold text-[#2C1810]">
+              <th className="px-4 py-3 text-left font-extrabold text-[#2C1810]">
                 Customer / ID
               </th>
-              <th className="px-5 py-3.5 text-right font-semibold text-[#2C1810]">
+              <th className="px-4 py-3 text-right font-extrabold text-[#2C1810]">
                 Amount
               </th>
-              <th className="px-5 py-3.5 text-center font-semibold text-[#2C1810]">
+              <th className="px-4 py-3 text-center font-extrabold text-[#2C1810]">
                 Status
               </th>
             </tr>
@@ -119,12 +119,11 @@ export function RecentTransactions() {
               return (
                 <tr
                   key={trx.id}
-                  className="transition-colors hover:bg-[#FFF8E7]/50"
-                >
-                  <td className="px-5 py-3.5 text-[#8B6914]/70 whitespace-nowrap">
+                  className="transition-colors hover:bg-[#FFF8E7]">
+                  <td className="px-4 py-3 text-[#8B6914]/80 whitespace-nowrap">
                     {trx.date}
                   </td>
-                  <td className="px-5 py-3.5">
+                  <td className="px-4 py-3">
                     <p className="font-medium text-[#2C1810]">
                       {trx.customerName}
                     </p>
@@ -132,10 +131,10 @@ export function RecentTransactions() {
                       {trx.transactionId}
                     </p>
                   </td>
-                  <td className="px-5 py-3.5 text-right font-medium text-[#2C1810] whitespace-nowrap">
+                  <td className="px-4 py-3 text-right font-medium text-[#2C1810] whitespace-nowrap">
                     {trx.amount}
                   </td>
-                  <td className="px-5 py-3.5">
+                  <td className="px-4 py-3">
                     <div className="flex items-center justify-center gap-1.5">
                       <span
                         className={cn("size-2 rounded-full", config.dot)}
