@@ -64,10 +64,10 @@ export function AlertsSection() {
   return (
     <section>
       <div className="flex items-center gap-3">
-        <h2 className="text-lg font-extrabold text-[#2C1810] uppercase tracking-wide">
+        <h2 className="text-lg font-bold text-[#2C1810]">
           Alerts
         </h2>
-        <span className="border-[2px] border-black bg-red-500 px-2.5 py-0.5 text-xs font-extrabold text-white shadow-[2px_2px_0_0_#000]">
+        <span className="rounded-full bg-red-500 px-2.5 py-0.5 text-xs font-semibold text-white">
           {urgentCount} Urgent
         </span>
       </div>
@@ -80,29 +80,29 @@ export function AlertsSection() {
             <div
               key={alert.id}
               className={cn(
-                "border-[3px] border-black border-l-[5px] bg-white p-4 shadow-[3px_3px_0_0_#000]",
+                "rounded-xl border border-[#E8DCC8] border-l-4 bg-white p-4 shadow-sm transition-shadow hover:shadow-md",
                 config.border
               )}
             >
               <div className="flex items-start justify-between gap-2">
                 <div>
-                  <p className="text-sm font-extrabold text-[#2C1810]">
+                  <p className="text-sm font-semibold text-[#2C1810]">
                     {alert.title}
                   </p>
-                  <p className="mt-0.5 text-xs font-medium text-[#8B6914]/70">
+                  <p className="mt-0.5 text-xs text-[#8B6914]/60">
                     Customer: {alert.customer}
                   </p>
                 </div>
                 <span
                   className={cn(
-                    "shrink-0 border-[2px] border-black px-2 py-0.5 text-[10px] font-extrabold shadow-[2px_2px_0_0_#000]",
+                    "shrink-0 rounded-full px-2.5 py-0.5 text-[10px] font-semibold",
                     config.badge
                   )}
                 >
                   {config.label}
                 </span>
               </div>
-              <p className="mt-2 flex items-center gap-1 text-xs font-medium text-[#8B6914]/60">
+              <p className="mt-2 flex items-center gap-1 text-xs text-[#8B6914]/50">
                 <span>⏱</span> {alert.detail}
               </p>
             </div>

@@ -30,7 +30,7 @@ const actions = [
 export function QuickActions() {
   return (
     <section>
-      <h2 className="text-lg font-extrabold text-[#2C1810] uppercase tracking-wide">
+      <h2 className="text-lg font-bold text-[#2C1810]">
         Quick Actions
       </h2>
 
@@ -39,12 +39,12 @@ export function QuickActions() {
           <Link
             key={action.label}
             href={action.href}
-            className="flex flex-col items-center gap-3 border-[3px] border-black bg-white px-4 py-6 text-center shadow-[4px_4px_0_0_#000] transition-all hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0_0_#000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-[1px_1px_0_0_#000]"
+            className="group flex flex-col items-center gap-3 rounded-2xl border border-[#E8DCC8] bg-white px-4 py-6 text-center shadow-sm transition-all duration-200 hover:shadow-lg hover:shadow-amber-900/5 hover:border-[#D4A843]/50 hover:-translate-y-0.5"
           >
-            <div className="flex items-center justify-center size-14 border-[2px] border-black bg-[#FFF8E7] text-[#3D2314] shadow-[2px_2px_0_0_#D4A843]">
-              <action.icon className="size-7" strokeWidth={2.5} />
+            <div className="flex items-center justify-center size-14 rounded-2xl bg-gradient-to-br from-[#FFF8E7] to-[#FFF1D0] text-[#3D2314] transition-transform duration-200 group-hover:scale-105">
+              <action.icon className="size-6" strokeWidth={1.8} />
             </div>
-            <span className="text-sm font-bold text-[#2C1810]">
+            <span className="text-sm font-semibold text-[#2C1810]">
               {action.label}
             </span>
           </Link>

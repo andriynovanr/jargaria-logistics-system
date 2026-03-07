@@ -24,16 +24,16 @@ export default function DashboardPage() {
       {/* Header */}
       <div className="flex items-start justify-between">
         <div>
-          <h1 className="text-2xl font-extrabold text-[#2C1810] tracking-tight">
+          <h1 className="text-2xl font-bold text-[#2C1810]">
             Dashboard Overview
           </h1>
-          <p className="mt-1 text-sm font-medium text-[#8B6914]/70">
+          <p className="mt-1 text-sm text-[#8B6914]/60">
             Selamat datang kembali, berikut ringkasan ekspedisi hari ini.
           </p>
         </div>
 
-        <div className="flex items-center gap-2 border-[3px] border-black bg-white px-4 py-2 text-sm font-bold text-[#2C1810] shadow-[3px_3px_0_0_#000]">
-          <Calendar className="size-4 text-[#D4A843]" strokeWidth={2.5} />
+        <div className="flex items-center gap-2 rounded-full border border-[#E8DCC8] bg-white px-4 py-2 text-sm font-medium text-[#2C1810] shadow-sm">
+          <Calendar className="size-4 text-[#D4A843]" />
           {today}
         </div>
       </div>
